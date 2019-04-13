@@ -30,7 +30,6 @@ module.exports = {
       email: 'me@kriss.io',
       twitter: 'krissanawat',
       github: 'krissanawat',
-      medium: 'kris101'
     }
   }
 };
