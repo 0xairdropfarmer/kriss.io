@@ -23,16 +23,14 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Krissanawat',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Hello guy My name Krissanawat Freelance web developer ,Americano addictor , frequently write on React and React native',
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
+      email: 'me@kriss.io',
+      twitter: 'krissanawat',
+      github: 'krissanawat',
+      medium: 'kris101'
     }
   }
 };
