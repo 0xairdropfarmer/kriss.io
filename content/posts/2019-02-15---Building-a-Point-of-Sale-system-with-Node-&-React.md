@@ -1,12 +1,12 @@
 ---
 title:  Building a Point of Sale system with Node & React
-date: "2019-15-02T22:40:32.169Z"
+date: "2019-02-15T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "/posts/Building-a-Point-of-Sale-system-with-Node-&-React"
+slug: "/posts/Building-a-Point-of-Sale-system-with-Node-React"
 category: "React"
 tags:
-  - "React""
+  - "React"
 description: "this tutorial we gonna build simple POS with React and Node"
 ---
 ![](https://cdn-images-1.medium.com/max/2560/1*RNjNx81GWExB7DQfQuG2gQ.png)

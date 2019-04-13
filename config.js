@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://kriss.io',
   title: 'just another React Developer Blog',
-  subtitle: 'Hello guy My name Krissanawat Freelance web developer ,Americano addictor , frequently write on React and React native ',
+  subtitle: 'Hello guy My name Krissanawat Freelance web developer, Americano addictor , frequently write on React and React native ',
   copyright: '© 2019 All rights reserved.',
   disqusShortname: 'krissio',
   postsPerPage: 4,
@@ -16,15 +16,11 @@ module.exports = {
     {
       label: 'About me',
       path: '/pages/about'
-    },
-    {
-      label: 'Resume',
-      path: '/pages/contacts'
     }
   ],
   author: {
     name: 'Krissanawat',
-    photo: '/photo.jpg',
+    photo: '/photo.png',
     bio: 'Hello guy My name Krissanawat Freelance web developer ,Americano addictor , frequently write on React and React native',
     contacts: {
       email: 'me@kriss.io',
