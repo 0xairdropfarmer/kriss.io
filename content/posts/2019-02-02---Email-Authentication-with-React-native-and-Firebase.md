@@ -46,12 +46,14 @@ directly run the app after that by just using a simple command.
 We are going to develop this project with VS Code. So open this up in visual
 studio code and their open terminal run` yarn start` .
 
+![](https://cdn-images-1.medium.com/max/800/1*9SK_CH3o-IDE8p8KsOThUQ.png)
+
 The expo will open a new window in the browser as shown below. There you can see
 options for running the app using android emulator or device, iOS simulator and
 by using QR Code scanner. We are using Android emulator to showcase this app.
-
+![](https://cdn-images-1.medium.com/max/800/1*PW423-1Tjn8fks4L2gJkgA.png)
 After that open up your emulator and use it to open the expo app.
-
+![](https://cdn-images-1.medium.com/max/800/1*i1sWhQffYcfc8H_vGPlQxQ.png)
 Emulators use so much space of your system’s memory depending on your device or
 OS. I try using Android on Mac and it’s eating so much space.
 
@@ -62,7 +64,7 @@ So now we are ready to code.
 To design our interface faster and smoother we are using Native base for
 developing this app. You can check out the native base for more information. So
 **let’s move on to the next step**
-
+![](https://cdn-images-1.medium.com/max/800/1*5EbYbqBLDkSkAd9fN3WgYg.png)
 Open a new terminal run `npm i native-base`
 
 Next step to import necessary Native base component to to `App.js`
@@ -98,7 +100,7 @@ And construct form interface
 
 When you save the result, you can see them instantly on the screen. This is a
 feature called as Hot-reloading.
-
+![](https://cdn-images-1.medium.com/max/800/1*amrAqLk-PnDgYxX2LGiNtQ.png)
 A form appears on the top.
 
 Now, form design is ready. Let’s move on to the main programming part.
@@ -112,10 +114,10 @@ import that into our project.
 
 In the next step, you need to **create a firebase project. Goto firebase console
 **and make one as shown below:
-
+![](https://cdn-images-1.medium.com/max/800/1*3fOfGamtqmYQhHTAdh_3xQ.png)
 **Now grab configuration apikey which very important to access the data from the
 database.**
-
+![](https://cdn-images-1.medium.com/max/800/1*gYLOCODc-62_40IIgqUlXw.png)
 And paste to App.js as shown below in the code structure.
 
     import * as firebase from "firebase";
@@ -138,14 +140,14 @@ Now, we have successfully added firebase to our project.
 
 For email authentication, we need to activate Email authentication on Firebase
 console.
-
+![](https://cdn-images-1.medium.com/max/800/1*H6lDsxgn_b86GR03CxU4WA.png)
 Let’s jump back to VS Code and add a signup button to it.
 
     <Button full rounded success style={{ marginTop: 20 }}> <Text>Signup</Text>
     </Button>
 
 Result view should be
-
+![](https://cdn-images-1.medium.com/max/800/1*uAJCmdBS0BC3Livsr6diAA.png)
 Now we have to add signup code.
 
     export default class App extends React.Component {
@@ -197,10 +199,10 @@ And we trigger SignUp function with onPress event from Signup button.
     onPress={() => this.SignUp(this.state.email, this.state.password)}
 
 Save and try to submit a form.
-
+![](https://cdn-images-1.medium.com/max/800/1*FOvrlff5CHMCggOMtfwtYg.png)
 After submitting the data goto firebase console and check that the data you have
 entered is coming there or not.
-
+![](https://cdn-images-1.medium.com/max/800/1*gfzS4jYpM4m6Jay_zcwOBQ.png)
 Now we have added data successfully in Firebase as a new user.
 
 #### Login
@@ -229,7 +231,7 @@ add an **onPress method to SignIn Buton.**
     onPress={() => this.LogIn(this.state.email, this.state.password)}
 
 Let’s try signing in.
-
+![](https://cdn-images-1.medium.com/max/800/1*APz57pOe9305P9y23NR19Q.png)
 Hola, finally we have made it. We got the data from the firebase user database.
 
 #### Conclusion
