@@ -1,13 +1,13 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
-  disqusShortname: '',
+  url: 'https://kriss.io',
+  title: 'just another React Developer Blog',
+  subtitle: 'Hello guy My name Krissanawat Freelance web developer',
+  copyright: '© 2019 All rights reserved.',
+  disqusShortname: 'krissio',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-137554402-1',
   menu: [
     {
       label: 'Articles',
