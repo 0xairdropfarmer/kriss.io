@@ -112,9 +112,10 @@ import that into our project.
 
     import * as firebase from "firebase";
 
-In the next step, you need to **create a firebase project. Goto firebase console
-**and make one as shown below:
+In the next step, you need to **create a firebase project. Goto firebase console and make one as shown below:**
+
 ![](https://cdn-images-1.medium.com/max/800/1*3fOfGamtqmYQhHTAdh_3xQ.png)
+
 **Now grab configuration apikey which very important to access the data from the
 database.**
 ![](https://cdn-images-1.medium.com/max/800/1*gYLOCODc-62_40IIgqUlXw.png)

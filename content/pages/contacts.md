@@ -1,5 +1,5 @@
 ---
-title: "Contact me"
+title: "My Resume"
 template: "page"
 ---
 

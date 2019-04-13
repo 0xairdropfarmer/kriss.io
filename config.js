@@ -28,7 +28,7 @@ module.exports = {
     bio: 'Hello guy My name Krissanawat Freelance web developer ,Americano addictor , frequently write on React and React native',
     contacts: {
       email: 'me@kriss.io',
-      twitter: 'krissanawat',
+      twitter: 'reactninjaio',
       github: 'krissanawat',
     }
   }
