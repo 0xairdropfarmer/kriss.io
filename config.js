@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://kriss.io',
   title: 'just another React Developer Blog',
-  subtitle: 'Hello guy My name Krissanawat Freelance web developer',
+  subtitle: 'Hello guy My name Krissanawat Freelance web developer ,Americano addictor , frequently write on React and React native ',
   copyright: '© 2019 All rights reserved.',
   disqusShortname: 'krissio',
   postsPerPage: 4,
