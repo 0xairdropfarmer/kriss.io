@@ -24,6 +24,9 @@ details such as the platform the device is running on. By using OneSignal
 plugin, mobile applications can send and receive push notifications. So, we are
 going to implement this OneSignal service to our React Native chat app in order
 to enable push notifications.
+<a href="https://www.instamobile.io/app-templates/react-native-chat-app-template?ref=4094" target="_blank">
+<img src="/Social Chat App Template.png">
+</a>
 
 ### Pre-requirement
 
@@ -156,6 +159,9 @@ shown in the screenshot below:
 ![](https://cdn-images-1.medium.com/max/800/1*mD5OK_RdGR8pk0cZlM7emQ.png)
 
 <br>
+<a href="https://www.instamobile.io/app-templates/react-native-chat-app-template?ref=4094" target="_blank">
+<img src="/Social Chat App Template.png">
+</a>
 
 ### Sending Push Notification
 
