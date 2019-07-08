@@ -293,4 +293,6 @@ send a push notification when a user joins or leaves a chat room. The code for
 this tutorial is freely available on
 [Github](https://github.com/krissnawat/pubnub-react-native-chat/tree/add-push-notification-with-OneSignal).
 
-<br>
+<p>
+This site contains affiliate links to products. We may receive a commission for purchases made through these links.
+</p>
