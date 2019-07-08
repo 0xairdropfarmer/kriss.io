@@ -30,7 +30,7 @@ to enable push notifications.
 Basically, to integrate OneSignal to React Native, We must have the following
 two requirements:
 
-1.  a starter code
+1.  [a starter code](https://github.com/krissnawat/pubnub-react-native-chat/tree/add_auth0)
 1.  Android hardware device (Because android emulator is too slow)
 
 ### Setting up OneSignal
@@ -88,6 +88,35 @@ After this, we need to go to our React native SDK
 add OneSignal code snippet code to our app which is shown in the code snippet
 below:
 
+```javascript
+  constructor(props) {
+    super(props);
+    ................
+    OneSignal.init(process.env.onesignal_key);
+    OneSignal.addEventListener("received", this.onReceived);
+    OneSignal.addEventListener("opened", this.onOpened);
+    OneSignal.addEventListener("ids", this.onIds);
+    OneSignal.configure();
+    ................
+  }
+
+ onReceived = notification => {
+    console.log("Notification received: ", notification);
+  };
+
+  onOpened = openResult => {
+    console.log("Message: ", openResult.notification.payload.body);
+    console.log("Data: ", openResult.notification.payload.additionalData);
+    console.log("isActive: ", openResult.notification.isAppInFocus);
+    console.log("openResult: ", openResult);
+  };
+
+  onIds = device => {
+    console.log("Device info: ", device);
+    this.setState({ device });
+  };
+```
+
 Here, We use three functions to display the activity log as you can see in the
 code snippet above. And when we open the app, it will automatically register to
 OneSignal as shown in the screenshot below:
@@ -137,6 +166,28 @@ API](https://documentation.onesignal.com/reference#section-example-code-create-n
 to send message to OneSignal server. We need to construct a URL and a payload as
 shown in the code snippet below:
 
+```javascript
+sendNotification = data => {
+  let headers = {
+    "Content-Type": "application/json; charset=utf-8",
+    Authorization: "Basic 'OneSignal Server Key'"
+  };
+
+  let endpoint = "https://onesignal.com/api/v1/notifications";
+
+  let params = {
+    method: "POST",
+    headers: headers,
+    body: JSON.stringify({
+      app_id: "xxxxxxxx-xxxxxx-xxx-a14a-xxxxxx",
+      included_segments: ["All"],
+      contents: { en: data }
+    })
+  };
+  fetch(endpoint, params).then(res => console.log(res));
+};
+```
+
 Here, we can just copy the code above and paste it to our React Native project
 but we must remember that we need a server key for creating Authorization header
 and app_id to construct the message.
@@ -148,9 +199,11 @@ OneSignal
 Now, we need to add a _sendNotification()_ function with a message to the
 *componentDidMount *of our React Native app as shown in the code snippet below:
 
+```javascript
     componentDidMount() {
        this.sendNotification('Greeting from Chat App');
     }
+```
 
 Now, we can observe that notification is displayed like an alert box when we
 launch our app as shown in the device screenshot below:
@@ -161,6 +214,47 @@ launch our app as shown in the device screenshot below:
 Now, we need to use this feature when a user joins or a user leaves the
 channel. For this, we can use the code provided in the code snippet below with
 the _PresenceStatus_ function:
+
+```javascript
+  PresenceStatus = () => {
+    this.pubnub.getPresence(RoomName, presence => {
+      if (presence.action === "join") {
+        let users = this.state.onlineUsers;
+
+        users.push({
+          state: presence.state,
+          uuid: presence.uuid
+        });
+
+        this.setState({
+          onlineUsers: users,
+          onlineUsersCount: this.state.onlineUsersCount + 1
+        });
+        this.props.navigation.setParams({
+          onlineUsersCount: this.state.onlineUsersCount
+        });
+        this.sendNotification(presence.uuid + " join room");
+      }
+
+      if (presence.action === "leave" || presence.action === "timeout") {
+        let leftUsers = this.state.onlineUsers.filter(
+          users => users.uuid !== presence.uuid
+        );
+
+        this.setState({
+          onlineUsers: leftUsers
+        });
+        console.log("leave room");
+        const length = this.state.onlineUsers.length;
+        this.setState({
+          onlineUsersCount: length
+        });
+        this.props.navigation.setParams({
+          onlineUsersCount: this.state.onlineUsersCount
+        });
+        this.sendNotification(presence.uuid + " leave room");
+      }
+```
 
 Here, we are calling _sendNotification()_ in two conditions. One is when a user
 enters the channel and other is when a user leaves the channel as shown in the
