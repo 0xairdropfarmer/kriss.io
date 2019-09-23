@@ -3,12 +3,11 @@ title: " Free React Native templates in 5 Best Sources"
 date: "2019-09-21T22:40:32.169Z"
 template: "post"
 draft: false
-slug: "/posts/Free-React-Native-templates-in-5-Best-Sources
-/"
+slug: "/posts/Free-React-Native-templates-in-5-Best-Sources"
 category: "React Native"
 tags:
   - "React native template"
-description: "At present, React Native is one of the top-notch and most prominent JavaScript Framework for making powerful native mobile apps, with the ability to build for both Android and iOS. It removes the hefty work to develop apps from a separate platform. Many popular applications are already running on this platform, including Facebook, Instagram, Netflix, and Airbnb. However, just due to the fact that React Native makes the process easier, it doesn’t mean it’s simple. The learning curve for React Native developers is pretty steep. This is where free React Native templates come in."
+description: "At present, React Native is one of the top-notch and most prominent JavaScript Framework for making powerful native mobile apps, with the ability to build for both Android and iOS. It removes the hefty work to develop apps from a separate platform. Many popular applications are already running on this platform"
 ---
 
 At present, React Native is one of the top-notch and most prominent JavaScript Framework for making powerful native mobile apps, with the ability to build for both Android and iOS. It removes the hefty work to develop apps from a separate platform. Many popular applications are already running on this platform, including Facebook, Instagram, Netflix, and Airbnb. However, just due to the fact that React Native makes the process easier, it doesn’t mean it’s simple. The learning curve for React Native developers is pretty steep. This is where free React Native templates come in.
